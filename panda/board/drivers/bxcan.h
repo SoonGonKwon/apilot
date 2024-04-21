@@ -202,6 +202,7 @@ void can_rx(uint8_t can_number) {
         can_send(&to_send, (bus_fwd_num / 10), true);
         can_send(&to_send, (bus_fwd_num % 10), true);
       } else {
+		  // 여기까지
       can_send(&to_send, bus_fwd_num, true);
     }
 
