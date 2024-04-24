@@ -283,7 +283,7 @@ def thermald_thread(end_event, hw_queue):
     #    if onroad_conditions["ignition"]:
     #      cloudlog.error("Lost panda connection while onroad")
     #    onroad_conditions["ignition"] = False
-    if sec_since_boot() - panda_state_ts > DISCONNECT_TIMEOUT:
+    if sec_since_boot() - panda_state_ts > 3.:
       if onroad_conditions["ignition"]:
         cloudlog.error("Lost panda connection while onroad")
       onroad_conditions["ignition"] = False
